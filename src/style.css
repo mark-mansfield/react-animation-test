@@ -1,0 +1,179 @@
+:root {
+  --card-width: 80px;
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+body:after {
+  content: '';
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Etihad_Stadium.jpg/1200px-Etihad_Stadium.jpg');
+  background-size: cover;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.btn {
+  padding: 20px;
+}
+
+.app {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.toggle-buttons {
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.overlay-bg {
+  width: 100%;
+  background: rgb(3, 3, 3);
+  background: -moz-linear-gradient(180deg, rgba(3, 3, 3, 1) 19%, rgba(255, 255, 255, 0) 84%);
+  background: -webkit-linear-gradient(180deg, rgba(3, 3, 3, 1) 19%, rgba(255, 255, 255, 0) 84%);
+  background: linear-gradient(180deg, rgba(3, 3, 3, 1) 19%, rgba(255, 255, 255, 0) 84%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#030303",endColorstr="#ffffff",GradientType=1);
+  z-index: 0;
+}
+
+.scoreboard {
+  position: relative;
+  z-index: 0;
+  top: 50px;
+  left: var(--card-width);
+  height: 300px;
+}
+
+.hometeam,
+.awayteam {
+  z-index: 4;
+  position: absolute;
+}
+
+.hometeam {
+  left: var(--card-width);
+  color: white;
+  border: 7px solid #fbf5f5;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+}
+
+.awayteam {
+  left: var(--card-width);
+  color: black;
+  border: 7px solid #c6c5c8;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.clock {
+  background-color: #001241;
+  position: absolute;
+  left: var(--card-width);
+  z-index: 3;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.card {
+  display: grid;
+  place-items: center;
+  width: var(--card-width);
+  height: 45px;
+}
+
+.teamstat {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  left: 0px;
+  z-index: 3;
+  height: 45px;
+  margin: 0 20px;
+}
+
+.team-stat-left-col {
+  position: absolute;
+  left: -21px;
+  z-index: 4;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  width: 260px;
+}
+
+.team-stat-right-col {
+  position: absolute;
+  z-index: 2;
+  left: 10px;
+}
+
+.team-logo {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 65px;
+  margin-left: 0px;
+  border-right: 1px solid white;
+  font-size: 2rem;
+}
+
+.team-name {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 220px;
+}
+
+.team-red-cards {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #001241;
+  font-weight: 400;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: calc(var(--card-width) * 2);
+}
+
+.team-red-cards > div:first-child {
+  color: #a4a2a2;
+}
+
+.team-red-cards > div > span.large-text {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+div.scores {
+  position: absolute;
+  left: var(--card-width);
+  z-index: 5;
+  width: calc(var(--card-width) + 10px);
+  background-color: #001241;
+  color: white;
+  font-size: 20px;
+}

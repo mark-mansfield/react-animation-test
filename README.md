@@ -14,4 +14,4 @@ This implementation is a playground for working with React and GSAP.
 
 1. to fully harness the power of GSAP in react
 2. to use SVG source graphics from external sources
-3. to work withexternal data API
+3. to work with external data API
